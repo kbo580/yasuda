@@ -42,7 +42,6 @@ img {
   max-width: 1040px;
   width: 100%;
   padding: 0 20px;
-  border: 1px solid #ddd;
 }
 
 .l-inner {
@@ -120,15 +119,6 @@ body.active {
   left: 0%;
 }
 
-.contact-btn__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
 .btn {
   color: #333333;
   line-height: 1.5;
@@ -137,16 +127,11 @@ body.active {
   font-weight: bold;
   text-align: center;
   line-height: 1;
-}
-.btn.--contact {
-  background-color: #F7C847;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0 auto;
 }
 
 .phone-btn {
-  width: 300px;
+  width: 80%;
   background: linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
   padding: 15px;
 }
@@ -159,6 +144,7 @@ body.active {
   font-weight: 700;
   font-style: normal;
   font-size: 1.875rem;
+  font-size: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,30 +167,26 @@ body.active {
 
 .contact-btn {
   background-color: #F7C847;
-  width: 140px;
+  width: 80%;
   font-size: 0.75rem;
-  margin-left: 10px;
+  margin-top: 20px;
   padding: 20px 25px;
   letter-spacing: 0.06em;
 }
 
-.fixed-contact-btn__wrap {
-  border: 1px solid #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-}
-.fixed-contact-btn__wrap .btn.--contact {
-  display: none;
+.contact-btn__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sns-link__icon {
-  height: 64px;
-  height: 40px;
-  width: 62px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   display: inline-block;
   -webkit-box-align: center;
@@ -237,20 +219,39 @@ body.active {
 }
 
 @media (min-width: 576px) {
+  .contact-btn__wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .btn {
+    margin: 0;
+  }
+  .phone-btn {
+    width: 300px;
+    background: linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
+    padding: 15px;
+  }
+  .phone-btn__top {
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+  .phone-btn__middle {
+    font-size: 1.875rem;
+  }
+  .phone-btn__middle img {
+    width: 18px;
+    margin-right: 5px;
+  }
+  .contact-btn {
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
   .sns-link__icon {
     height: 64px;
     width: 62px;
-  }
-  .contact-icon {
-    display: none;
-  }
-  .fixed-contact-btn__wrap .btn.--contact {
-    display: block;
-  }
-}
-@media (min-width: 765px) {
-  .fixed-contact-btn__wrap {
-    display: none;
   }
 }
 /* -------------------------------------------- */
@@ -325,6 +326,9 @@ body.active {
         -ms-flex-align: end;
             align-items: flex-end;
   }
+  .header .site-title {
+    width: 533.5px;
+  }
   .header-btn--phone {
     display: block;
   }
@@ -341,6 +345,9 @@ body.active {
   line-height: 1;
 }
 
+.sp-nav {
+  font-size: 1rem;
+}
 .sp-nav__item:not(:first-child) {
   margin-top: 31px;
 }
@@ -457,7 +464,7 @@ main {
   padding-bottom: 30px;
 }
 .footer__contact {
-  display: none;
+  margin-top: 10px;
 }
 .footer__sns-link {
   display: none;
@@ -482,6 +489,14 @@ main {
   .footer__sns-link {
     display: block;
   }
+  .footer__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .footer-contact-btn__wrap {
     margin-right: 25px;
   }
@@ -499,15 +514,6 @@ main {
             align-items: center;
     padding-top: 140px;
     padding-bottom: 140px;
-  }
-  .footer__contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 10px;
   }
 }
 /* -------------------------------------------- */

@@ -53,7 +53,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   max-width: 1040px;
   width: 100%;
   padding: 0 20px;
-  border: 1px solid #ddd;
+  // border: 1px solid #ddd;
 }
 
 .l-inner{
@@ -134,14 +134,7 @@ body.active{
   left: 0%;
 }
 
-
 //----- ボタン関連 -----
-.contact-btn__wrap{
-  display: flex;
-  // justify-content: space-between;
-  align-items: stretch;
-}
-
 //ボタン共通
 .btn{
   color: #333333;
@@ -151,22 +144,12 @@ body.active{
   font-weight: bold;
   text-align: center;
   line-height: 1;
-  
-  &.--phone{
-    // width: 240px;
-    // 
-  }
-
-  &.--contact{
-    background-color: #F7C847;
-    display: flex;
-  }
+  margin: 0 auto;
 }
 
 //TELボタン
 .phone-btn{
-  // width: 240px;
-  width: 300px;
+  width: 80%;
   background:linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
   padding: 15px;
 
@@ -180,6 +163,7 @@ body.active{
     font-weight: 700;
     font-style: normal;
     font-size: rem(30);
+    font-size: rem(20);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,47 +184,24 @@ body.active{
 //お問い合わせボタン
 .contact-btn{
   background-color: #F7C847;
-  width: 140px;
+  width: 80%;
   font-size: rem(12);
-  margin-left: 10px;
+  margin-top: 20px;
   padding: 20px 25px;
   letter-spacing: 0.06em;
 }
 
-.fixed-contact-btn__wrap{
-  border: 1px solid #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-
-  .btn.--contact{
-    display: none;
-  }
+//電話と問い合わせのwrap
+.contact-btn__wrap{
+  display: flex;
+  flex-direction: column;
 }
 
-// .contact-icon{
-//   background-color: yellow;
-//   display: flex;
-//   border-radius: 10px;
-//   display: block;
-//   padding: 10px;
-// }
-
-// .phone-num{
-//   font-size: rem(26);
-//   letter-spacing: 0.1em;
-//   font-family:"YuMincho";
-// }
-
-//snsアイコン
+//----- snsアイコン -----
 .sns-link{
   &__icon{
-    height: 64px;
-    height: 40px;
-    width: 62px;
-    width: 40px;
+    height:50px;
+    width:50px;
     border-radius: 50%;
     display: inline-block;
     align-items: center;
@@ -273,23 +234,50 @@ body.active{
 }
 
 @media (min-width: 576px) {
-  //snsアイコン
+  .contact-btn__wrap{
+    flex-direction: row;
+  }
+
+  //----- ボタン関連 -----
+  //ボタン共通
+  .btn{
+    margin: 0;
+  }
+
+  //TELボタン
+  .phone-btn{
+    width: 300px;
+    background:linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
+    padding: 15px;
+
+    &__top{
+      font-weight: bold;
+      font-size: rem(12);
+    }
+
+    &__middle{
+      font-size: rem(30);
+
+      img{
+        width: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  //お問い合わせボタン
+  .contact-btn{
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+
+  //---- snsアイコン -----
   .sns-link{
 
     &__icon{
       height: 64px;
       width: 62px;
-    }
-  }
-
-  .contact-icon{
-    display: none;
-  }
-
-  .fixed-contact-btn__wrap{
-  
-    .btn.--contact{
-      display: block;
     }
   }
 }
@@ -298,12 +286,6 @@ body.active{
   // .burger{
   //   display: none;
   // }
-
-  .fixed-contact-btn__wrap{
-    display: none;
-  }
-
-  
 
 }
 
@@ -380,9 +362,15 @@ body.active{
       padding-bottom: 0;
     }
   
+    //----- ヘッダー上部 -----
     &__top{
       align-items: flex-end;
     }
+
+  .site-title{
+    width: 533.5px;
+  }
+
   }
   //電話ボタン
   .header-btn--phone{
@@ -394,10 +382,8 @@ body.active{
     display: block;
     margin-top: 47px;
     position: relative;
-
   }
 }
-
 
 /* -------------------------------------------- */
 /* ナビメニュー関連 */
@@ -408,6 +394,7 @@ body.active{
 
 //----- sp用ナビ -----
 .sp-nav{
+  font-size: rem(16);
 
   &__item{
     &:not(:first-child){
@@ -571,7 +558,6 @@ main{
 /* -------------------------------------------- */
 //会社情報
 .company-info{
-  // border: 1px solid #fff;
 
   &__name{
     line-height: 1;
@@ -603,7 +589,7 @@ main{
   }
 
   &__contact{
-    display: none;
+    margin-top: 10px;
   }
   
   &__sns-link{
@@ -634,6 +620,11 @@ main{
     &__sns-link{
       display: block;
     }
+
+    &__contact{
+      display: flex;
+      align-items: center;
+    }
   }
 
   .footer-contact-btn__wrap{
@@ -649,12 +640,6 @@ main{
       align-items: center;
       padding-top: 140px;
       padding-bottom: 140px;
-    }
-
-    &__contact{
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
     }
   }
 }
