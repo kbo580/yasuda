@@ -433,7 +433,7 @@ body.active{
 //----- pc用フッターナビ -----
 //footerのナビ
 .footer-nav{
-  margin-top: 10px;
+  margin-top: 20px;
   
   &__list{
     display: flex;
@@ -441,12 +441,12 @@ body.active{
   }
   
   &__item{
-    margin-top: 16px;
-    margin-right: 16px;
+    margin-top: 10px;
+    margin-right: 8px;
     
     &:not(:first-child){
       border-left: 1px solid #707070;
-      padding-left: 16px;
+      padding-left: 8px;
     }
   }
 

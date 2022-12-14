@@ -372,7 +372,7 @@ body.active {
   margin-right: 35px;
 }
 .footer-nav {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .footer-nav__list {
   display: -webkit-box;
@@ -382,12 +382,12 @@ body.active {
       flex-wrap: wrap;
 }
 .footer-nav__item {
-  margin-top: 16px;
-  margin-right: 16px;
+  margin-top: 10px;
+  margin-right: 8px;
 }
 .footer-nav__item:not(:first-child) {
   border-left: 1px solid #707070;
-  padding-left: 16px;
+  padding-left: 8px;
 }
 .footer-nav__link {
   display: block;
