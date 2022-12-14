@@ -1,0 +1,740 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #ffffff;
+
+
+body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+  outline:0;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-size: rem(14);
+  color: $textColor;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: rgba(0,0,0,0.9);
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  max-width:100%;
+  vertical-align: bottom;
+}
+
+
+header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
+  // background-color: rgba(0,0,0,0.9);
+  // border: 1px solid rgba(0,0,0,0.1);
+}
+
+.inner{
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px solid #ddd;
+}
+
+.l-inner{
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+
+/* -------------------------------------------- */
+/* 共通部分 */
+/* -------------------------------------------- */
+.heading{
+  font-family:"YuMincho";
+}
+
+.company-name{
+  font-family:"YuMincho";
+}
+
+
+/* bodyにactiveクラスが着いた時 */
+body.active{
+  overflow-y: hidden;
+}
+
+/* ハンバーガーメニュー */
+.burger{
+  width: 30px;
+  height: 30px;
+  // position: fixed;
+  cursor: pointer;
+  // top: 2%;
+  // right: 2%;
+  z-index: 3;
+  position: relative;
+}
+
+/* ハンバーガーメニューのバー */
+.bar{
+  width: 80%;
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  background-color: $textColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,0);
+  transition: all .4s;
+}
+    
+.bar:nth-of-type(1){
+  transform:translate(-50%,10px);
+}
+
+.bar:nth-of-type(3){
+  transform:translate(-50%,-10px);
+}
+
+/* バーガーメニューにactiveクラスが着いた時 */
+.burger.active .bar:nth-of-type(2){
+  opacity: 0;
+}
+
+.burger.active .bar:nth-of-type(1){
+  transform: rotate(-45deg);
+  left: 0%;
+}
+
+.burger.active .bar:nth-of-type(3){
+  transform: rotate(45deg);
+  left: 0%;
+}
+
+
+//----- ボタン関連 -----
+.contact-btn__wrap{
+  display: flex;
+  // justify-content: space-between;
+  align-items: stretch;
+}
+
+//ボタン共通
+.btn{
+  color: #333333;
+  line-height: 1.5;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  
+  &.--phone{
+    // width: 240px;
+    // 
+  }
+
+  &.--contact{
+    background-color: #F7C847;
+    display: flex;
+  }
+}
+
+//TELボタン
+.phone-btn{
+  // width: 240px;
+  width: 300px;
+  background:linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
+  padding: 15px;
+
+  &__top{
+    font-weight: bold;
+    font-size: rem(12);
+  }
+
+  &__middle{
+    font-family: "kozuka-mincho-pr6n", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+
+    img{
+      width: 18px;
+      margin-right: 5px;
+    }
+  }
+
+  &__bottom{
+    font-size: rem(14);
+    margin-top: 6px;
+  }
+}
+
+//お問い合わせボタン
+.contact-btn{
+  background-color: #F7C847;
+  width: 140px;
+  font-size: rem(12);
+  margin-left: 10px;
+  padding: 20px 25px;
+  letter-spacing: 0.06em;
+}
+
+.fixed-contact-btn__wrap{
+  border: 1px solid #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+
+  .btn.--contact{
+    display: none;
+  }
+}
+
+// .contact-icon{
+//   background-color: yellow;
+//   display: flex;
+//   border-radius: 10px;
+//   display: block;
+//   padding: 10px;
+// }
+
+// .phone-num{
+//   font-size: rem(26);
+//   letter-spacing: 0.1em;
+//   font-family:"YuMincho";
+// }
+
+//snsアイコン
+.sns-link{
+  &__icon{
+    height: 64px;
+    height: 40px;
+    width: 62px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .facebook {
+    background-color: #1759B2;
+    margin-right: 10px;
+
+    img{
+      width: 30%;
+    }
+  }
+
+  .instagram{
+    background-image: linear-gradient(45deg, #D1AB2C, #FF12DB);
+    img{
+      width: 55%;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  //snsアイコン
+  .sns-link{
+
+    &__icon{
+      height: 64px;
+      width: 62px;
+    }
+  }
+
+  .contact-icon{
+    display: none;
+  }
+
+  .fixed-contact-btn__wrap{
+  
+    .btn.--contact{
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  // .burger{
+  //   display: none;
+  // }
+
+  .fixed-contact-btn__wrap{
+    display: none;
+  }
+
+  
+
+}
+
+/* -------------------------------------------- */
+/* header */
+/* -------------------------------------------- */
+.header{
+  z-index: 1;
+
+  &__wrap{
+    // border: 1px solid #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  //----- ヘッダー上部 -----
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-title{
+    width: 533.5px;
+    width: 280px;
+  }
+}
+
+//電話ボタン
+.header-btn--phone{
+  display: none;
+}
+
+//----- sp用ヘッダー下部 -----
+.sp-header__bottom{
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+.sp-header__bottom-wrap{
+  border-left: 1px solid #707070;
+  padding-left: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//----- pc用ヘッダー下部 -----
+.pc-header__bottom{
+  display: none;
+}
+
+@media (min-width: 765px) {
+  .header__sns-link{
+    position: absolute;
+    top: -27px;
+    right: -130px
+  }
+
+}
+
+@media (min-width: 992px){
+  .header{
+
+    &__wrap{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    &__top{
+      align-items: flex-end;
+    }
+  }
+  //電話ボタン
+  .header-btn--phone{
+    display: block;
+  }
+
+  //pc用ヘッダー下部
+  .pc-header__bottom{
+    display: block;
+    margin-top: 47px;
+    position: relative;
+
+  }
+}
+
+
+/* -------------------------------------------- */
+/* ナビメニュー関連 */
+/* -------------------------------------------- */
+.nav{
+  line-height: 1;
+}
+
+//----- sp用ナビ -----
+.sp-nav{
+
+  &__item{
+    &:not(:first-child){
+      margin-top: 31px;
+    }
+  }
+
+  &__link{
+    display: inline-block;
+  }
+}
+
+//snsのリンク
+.sp-sns-link{
+  margin-top: 30px;
+}
+
+//----- pc用ヘッダーナビ -----
+.header-nav{
+  font-size: rem(16);
+  letter-spacing: 0.06em;
+
+  &__list{
+    display: flex;
+  }
+
+  &__item{
+    margin-right: 35px;
+  }
+
+  &__link{
+    // background-color: #fc2;
+  }
+}
+
+//----- pc用フッターナビ -----
+//footerのナビ
+.footer-nav{
+  margin-top: 10px;
+  
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__item{
+    margin-top: 16px;
+    margin-right: 16px;
+    
+    &:not(:first-child){
+      border-left: 1px solid #707070;
+      padding-left: 16px;
+    }
+  }
+
+  &__link{
+    display: block;
+  }
+}
+
+@media (min-width: 765px) {
+  //----- sp用ナビ -----
+  .sp-nav{
+    font-size: rem(16);
+  }
+
+  .header-nav{
+    // display: flex;
+  }
+
+}
+
+@media (min-width: 992px){
+  .burger{
+    display: none;
+  }
+
+    //footerのナビ
+    .footer-nav{
+      border-left: 1px solid #707070;
+      padding-left: 40px;
+      flex: 1;
+      height: 100%;
+      
+      &__list{
+        display: block;
+      }
+      
+      &__item{
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        
+        &:not(:first-child){
+          border-left: none;
+          padding-left: 0;
+          margin-top: 30px;
+        }
+      }
+    
+      &__link{
+        display: block;
+      }
+    }
+}
+
+
+/* -------------------------------------------- */
+/* mv */
+/* -------------------------------------------- */
+.mv{
+  // height: 100vh;
+  // height: 700px;
+  // width: 100%;
+  // background-color: rgba(0, 0, 0, 0.6);
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+main{
+  height: 500px;
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* アクセス */
+/* -------------------------------------------- */
+//会社情報
+.company-info{
+  // border: 1px solid #fff;
+
+  &__name{
+    line-height: 1;
+  }
+
+  &__address{
+    margin-top: 32px;
+  }
+
+  &__list{
+    margin-top: 14px;
+  }
+
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* footer */
+/* -------------------------------------------- */
+.footer{
+
+  &__wrap{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__contact{
+    display: none;
+  }
+  
+  &__sns-link{
+    display: none;
+  }
+  
+  //コピーライト
+  &__copy{
+    border-top: 1px solid #fff;
+    padding: 16px 0;
+    text-align: center;
+    font-size: rem(12);
+    line-height: 1;
+    padding: 40px;
+  }
+}
+
+.footer-company-info__name{
+  font-size: rem(24);
+}
+
+@media (min-width: 765px) {
+  .footer{
+    &__left{
+      margin-right: 80px;
+    }
+    
+    &__sns-link{
+      display: block;
+    }
+  }
+
+  .footer-contact-btn__wrap{
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: 992px){
+  .footer{
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    &__contact{
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
