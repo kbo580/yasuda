@@ -8,6 +8,7 @@
 }
 
 $textColor: #ffffff;
+$blackColor: #000000;
 
 
 body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
@@ -24,13 +25,12 @@ body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
 body {
   font-size: rem(14);
   color: $textColor;
-  // color: #333;
   line-height: 1.5;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   font-family: "yu-gothic-pr6n", sans-serif;
   font-style: normal;
   font-weight: 400;
-  // background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.9);
 }
 
 a { 
@@ -45,7 +45,7 @@ img{
 
 
 header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
-  background-color: rgba(0,0,0,0.9);
+  // background-color: rgba(0,0,0,0.9);
   // background-color: rgba(0,200,100,0.1);
   // border: 1px solid rgba(0,0,0,0.1);
 }
@@ -67,21 +67,33 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   position: relative;
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
-
 
 /* -------------------------------------------- */
 /* 共通部分 */
 /* -------------------------------------------- */
-.heading{
-  font-family:"YuMincho";
+.mincho{
+  font-family: "kozuka-mincho-pr6n", serif;
 }
 
-.company-name{
-  font-family:"YuMincho";
+section{
+  padding-top: 200px;
+}
+
+.sec-heading{
+  font-family: "kozuka-mincho-pr6n", serif;
+  font-size: rem(32);
+  line-height: 1;
+  display: block;
+  text-align: center;
+  margin-bottom: 82px;
+
+}
+
+.sec-sub-heading{
+  display: block;
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-size: rem(16);
+  margin-top: 22px;
 }
 
 
@@ -142,7 +154,7 @@ body.active{
 //----- ボタン関連 -----
 //ボタン共通
 .btn{
-  color: #333333;
+  color: $blackColor;
   line-height: 1.5;
   border-radius: 10px;
   display: block;
@@ -167,7 +179,6 @@ body.active{
     font-family: "kozuka-mincho-pr6n", serif;
     font-weight: 700;
     font-style: normal;
-    font-size: rem(30);
     font-size: rem(20);
     display: flex;
     align-items: center;
@@ -193,14 +204,28 @@ body.active{
   font-size: rem(12);
   margin-top: 20px;
   padding: 20px 25px;
-  letter-spacing: 0.06em;
+  
 }
 
 //電話と問い合わせのwrap
 .contact-btn__wrap{
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
+
+  //もっと見るボタン
+  .more{
+    border: 1px solid #fff;
+    font-size: rem(16);
+    line-height: 1;
+    padding: 12px;
+    display: block;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 55px;
+  }
 
 //----- snsアイコン -----
 .sns-link{
@@ -234,6 +259,70 @@ body.active{
     background-image: linear-gradient(45deg, #D1AB2C, #FF12DB);
     img{
       width: 55%;
+    }
+  }
+}
+
+//----- 製品ページへのリンクと矢印 -----
+//基本
+.page-link__wrap{
+  display: block;
+  text-align: right;
+
+  .page-link{
+    position: relative;
+    padding-right: 98px;
+    line-height: 1;
+  
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: $blackColor;
+    }
+
+    //下の線
+    &::before{
+      width: 88px;
+      bottom: 0%;
+      right: 0%;
+    }
+  
+    //上の線
+    &::after{
+      width: 8px;
+      transform: rotate(45deg);
+      right: 0%;
+      bottom: 21%;
+    }
+  }
+
+  //白バージョン
+  &.--white{
+    text-align: center;
+    .page-link{
+      padding-top: 14px;
+      padding-bottom: 14px;
+      display: block;
+
+      //矢印
+      &::before,
+      &::after{
+        background: $textColor;
+      }
+
+      //下の線
+      &::before{
+        bottom: 40%;
+        right:54px;
+      }
+
+      //上の線
+      &::after{
+        right: 54px;
+        bottom: 47%;
+      }
     }
   }
 }
@@ -292,6 +381,15 @@ body.active{
   //   display: none;
   // }
 
+}
+
+/* Hover Event */
+@media (hover: hover){
+  .page-link:hover{
+    opacity: .4;
+  }
+
+  
 }
 
 /* -------------------------------------------- */
@@ -373,11 +471,11 @@ body.active{
       align-items: flex-end;
     }
 
-  .site-title{
-    width: 533.5px;
+    .site-title{
+      width: 533.5px;
+    }
   }
 
-  }
   //電話ボタン
   .header-btn--phone{
     display: block;
@@ -421,7 +519,6 @@ body.active{
 //----- pc用ヘッダーナビ -----
 .header-nav{
   font-size: rem(16);
-  letter-spacing: 0.06em;
 
   &__list{
     display: flex;
@@ -514,11 +611,11 @@ body.active{
 .mv{
   background-color: rgb(0, 0, 0);
   position: relative;
+  padding-top: 25px;
 
   &__copy{
     font-size: min(max(26px, calc(1.625rem + ((1vw - 3.75px) * 4.0884))), 63px);
     font-family: "kozuka-mincho-pr6n", serif;
-    letter-spacing: 0.06em;
     position: absolute;
     z-index: 1;
     bottom: calc(90 / 1920 * 100vw);
@@ -537,40 +634,300 @@ body.active{
 
 
 /* -------------------------------------------- */
-/*  */
+/* about */
 /* -------------------------------------------- */
-main{
-  // height: 500px;
+.about{
+  text-align: center;
+  line-height: 2;
+  position: relative;
+  // height: 650px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/about.png) center/cover;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/about.png) 0%/cover;
+  overflow: hidden;
+
+  &::before{
+    content: '';
+    background: inherit;
+    filter: blur(9px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+  }
+
+  &__wrap{
+    padding-top: 140px;
+    padding-bottom: 165px;
+    // border: 1px solid #fff;
+  }
+
+  &__top{
+    font-size: rem(19);
+  }
+  
+  &__bottom{
+    font-size: rem(14);
+    margin-top: 50px;
+  }
+
 }
 
 @media (min-width: 765px) {
+  .about{
+    // height: 650px;
+  
+    &__wrap{
+      padding-top: 140px;
+      padding-bottom: 165px;
+    }
+  
+    &__top{
+      font-size: rem(30);
+    }
+    
+    &__bottom{
+      font-size: rem(16);
+      margin-top: 70px;
+    }
+  }
+}
 
+/* -------------------------------------------- */
+/* pickUp  */
+/* -------------------------------------------- */
+.pickUp{
+  &__wrap{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+
+  //文章の方
+  &__body{
+    background-color: #fff;
+    color: $blackColor;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px 15px;
+  }
+
+  &__name{
+    font-size: rem(20);
+    text-align: center;
+  }
+
+  &__desc{
+    margin-top: 30px;
+  }
+  
+  &__link{
+    margin-top: 26px;
+    display: inline-block;
+  }
+  
+  //画像の方
+  &__image{
+    width: 100%;
+  }
+}
+
+@media (min-width: 765px) {
+  .pickUp{
+    &__wrap{
+      flex-direction: row-reverse;
+      margin-top: 82px;
+    }
+    
+    //文章の方
+    &__body{
+      width: 50%;
+      padding: 60px 50px;
+      margin-top: 0;
+    }
+  
+    &__name{
+      font-size: rem(24);
+    }
+
+    &__desc{
+      margin-top: 41px;
+    }
+    
+    //画像の方
+    &__images{
+      width: 50%;
+    }
+  }
 
 }
 
 /* -------------------------------------------- */
-/*  */
+/* products */
 /* -------------------------------------------- */
+.products{
+  
+}
 
+//----- 製品 -----
+.products-card{
+
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 990px;
+    margin-left: auto;
+  }
+  
+  //アイテム
+  &__item{
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  //背景画像
+  &__bg{
+    aspect-ratio: 1/ 1.193;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  //説明
+  &__desc{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 22px 32px;
+  }
+
+  //ラベル
+  &__label{
+    font-size: rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: linear-gradient(45deg,#91910D,#FFC600)
+  }
+}
+
+@media (min-width: 576px){
+  //----- 製品 -----
+  .products-card{
+  
+    //アイテム
+    &__item{
+      width: calc((100% - 44px) / 2);
+    }
+  }
+}
 
 @media (min-width: 765px) {
-
+//----- 製品 -----
+.products-card{
+  
+  //アイテム
+  &__item{
+    width: calc((100% - 88px) / 3);
+  }
+}
 
 }
 
 /* -------------------------------------------- */
-/*  */
+/* scene */
 /* -------------------------------------------- */
+.scene{
 
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -56px;
+  }
+}
 
-@media (min-width: 765px) {
+//カード
+.scene-card{
+  width: 100%;
+  position: relative;
+  margin-top: 56px;
 
+  &__image{
+    width: 100%;
+  }
+
+  //見出し
+  &__heading{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: linear-gradient(90deg, #910D40, #F50168 );
+    padding: 1em;
+    font-size: rem(16);
+    line-height: 1;
+  }
+}
+
+@media (min-width: 576px){
+  //カード
+  .scene-card{
+    width: calc((100% - 55px)/2);
+    position: relative;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  //カード
+  .scene-card{
+    width: 300px;
+    height: 300px;
+  }
 
 }
 
 /* -------------------------------------------- */
 /* アクセス */
 /* -------------------------------------------- */
+.accses{
+  &__wrap{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  //アクセス左側(画像)
+  &__left{
+    width: 100%;
+  }
+  
+  //アクセス右側(情報)
+  &__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  //google map
+  &__map{
+    width: 100%;
+    margin-top: 30px;
+    iframe{
+      width: 100%;
+      aspect-ratio: 45/22;
+      vertical-align: bottom;
+    }
+  }
+}
+
 //会社情報
 .company-info{
 
@@ -589,8 +946,44 @@ main{
 }
 
 @media (min-width: 765px) {
+  .accses{
+  
+    //google map
+    &__map{
+      width: 100%;
+      margin-top: 30px;
+      iframe{
+        width: 100%;
+        aspect-ratio: 45/22;
+        vertical-align: bottom;
+      }
+    }
+  }
 
+}
 
+@media (min-width: 992px){
+  .accses{
+    &__wrap{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    //アクセス左側
+    &__left{
+      width: 50%;
+      margin-right: 50px;
+    }
+
+    //アクセス右側
+    &__right{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 0px;
+    }
+  }
 }
 
 /* -------------------------------------------- */
