@@ -24,12 +24,13 @@ body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
 body {
   font-size: rem(14);
   color: $textColor;
+  // color: #333;
   line-height: 1.5;
   letter-spacing: 0.1em;
   font-family: "yu-gothic-pr6n", sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: rgba(0,0,0,0.9);
+  // background-color: rgba(0,0,0,0.9);
 }
 
 a { 
@@ -44,7 +45,8 @@ img{
 
 
 header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
-  // background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.9);
+  // background-color: rgba(0,200,100,0.1);
   // border: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -54,12 +56,15 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   width: 100%;
   padding: 0 20px;
   // border: 1px solid #ddd;
+  position: relative;
 }
 
 .l-inner{
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
+  // border: 1px solid #fff;
+  position: relative;
 }
 
 /* Hover Event */
@@ -349,7 +354,8 @@ body.active{
   .header__sns-link{
     position: absolute;
     top: -27px;
-    right: -130px
+    right: -130px;
+    z-index: 1;
   }
 
 }
@@ -506,17 +512,26 @@ body.active{
 /* mv */
 /* -------------------------------------------- */
 .mv{
-  // height: 100vh;
-  // height: 700px;
-  // width: 100%;
-  // background-color: rgba(0, 0, 0, 0.6);
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+
+  &__copy{
+    font-size: min(max(26px, calc(1.625rem + ((1vw - 3.75px) * 4.0884))), 63px);
+    font-family: "kozuka-mincho-pr6n", serif;
+    letter-spacing: 0.06em;
+    position: absolute;
+    z-index: 1;
+    bottom: calc(90 / 1920 * 100vw);
+  }
 }
 
 @media (min-width: 765px) {
+  .mv{
+  
+    &__copy{
 
+    }
+  }
 
 }
 
@@ -525,7 +540,7 @@ body.active{
 /*  */
 /* -------------------------------------------- */
 main{
-  height: 500px;
+  // height: 500px;
 }
 
 @media (min-width: 765px) {

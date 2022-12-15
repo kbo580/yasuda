@@ -24,7 +24,6 @@ body {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 a {
@@ -37,17 +36,23 @@ img {
   vertical-align: bottom;
 }
 
+header, main, section, footer, div, ul, li, h1, h2, h3, dl, dt, dd {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .inner {
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
   padding: 0 20px;
+  position: relative;
 }
 
 .l-inner {
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
+  position: relative;
 }
 
 /* Hover Event */
@@ -314,6 +319,7 @@ body.active {
     position: absolute;
     top: -27px;
     right: -130px;
+    z-index: 1;
   }
 }
 @media (min-width: 992px) {
@@ -430,13 +436,22 @@ body.active {
 /* -------------------------------------------- */
 /* mv */
 /* -------------------------------------------- */
+.mv {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+.mv__copy {
+  font-size: min(max(26px, 1.625rem + (1vw - 3.75px) * 4.0884), 63px);
+  font-family: "kozuka-mincho-pr6n", serif;
+  letter-spacing: 0.06em;
+  position: absolute;
+  z-index: 1;
+  bottom: 4.6875vw;
+}
+
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
-main {
-  height: 500px;
-}
-
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
