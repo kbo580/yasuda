@@ -75,8 +75,9 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   font-family: "kozuka-mincho-pr6n", serif;
 }
 
-section{
-  padding-top: 200px;
+//section間のpadding
+.sec-pad{
+  padding-top: 100px;
 }
 
 .sec-heading{
@@ -268,7 +269,7 @@ body.active{
 .page-link__wrap{
   display: block;
   text-align: right;
-
+  
   .page-link{
     position: relative;
     padding-right: 98px;
@@ -377,6 +378,10 @@ body.active{
 }
 
 @media (min-width: 765px) {
+  //section間のpadding
+  .sec-pad{
+    padding-top: 200px;
+  }
   // .burger{
   //   display: none;
   // }
@@ -385,11 +390,37 @@ body.active{
 
 /* Hover Event */
 @media (hover: hover){
-  .page-link:hover{
-    opacity: .4;
+  .nav__link,
+  .phone-btn,
+  .contact-btn,
+  .sns-link__icon,
+  .products-card__item,
+  .scene-card{
+    transition: opacity .6s;
+    &:hover{
+      opacity: .6;
+    }
   }
 
-  
+  //もっと見るボタン
+  .more{
+    transition: background .4s, color .4s; 
+    &:hover{
+      background: #fff;
+      color: #000;
+    }
+  }
+
+  .page-link::before,
+  .page-link::after{
+    transition: right .4s;
+  }
+
+  .page-link:hover::before,
+  .page-link:hover::after{
+    right: -5%;
+  }
+
 }
 
 /* -------------------------------------------- */
@@ -527,10 +558,6 @@ body.active{
   &__item{
     margin-right: 35px;
   }
-
-  &__link{
-    // background-color: #fc2;
-  }
 }
 
 //----- pc用フッターナビ -----
@@ -552,10 +579,6 @@ body.active{
       padding-left: 8px;
     }
   }
-
-  &__link{
-    display: block;
-  }
 }
 
 @media (min-width: 765px) {
@@ -567,7 +590,6 @@ body.active{
   .header-nav{
     // display: flex;
   }
-
 }
 
 @media (min-width: 992px){
@@ -575,35 +597,30 @@ body.active{
     display: none;
   }
 
-    //footerのナビ
-    .footer-nav{
-      border-left: 1px solid #707070;
-      padding-left: 40px;
-      flex: 1;
-      height: 100%;
-      
-      &__list{
-        display: block;
-      }
-      
-      &__item{
-        margin-top: 0px;
-        margin-right: 0px;
-        padding-left: 0px;
-        
-        &:not(:first-child){
-          border-left: none;
-          padding-left: 0;
-          margin-top: 30px;
-        }
-      }
+  //footerのナビ
+  .footer-nav{
+    border-left: 1px solid #707070;
+    padding-left: 40px;
+    flex: 1;
+    height: 100%;
     
-      &__link{
-        display: block;
+    &__list{
+      display: block;
+    }
+    
+    &__item{
+      margin-top: 0px;
+      margin-right: 0px;
+      padding-left: 0px;
+      
+      &:not(:first-child){
+        border-left: none;
+        padding-left: 0;
+        margin-top: 30px;
       }
     }
+  }
 }
-
 
 /* -------------------------------------------- */
 /* mv */
@@ -629,9 +646,7 @@ body.active{
 
     }
   }
-
 }
-
 
 /* -------------------------------------------- */
 /* about */
@@ -641,7 +656,6 @@ body.active{
   line-height: 2;
   position: relative;
   // height: 650px;
-  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/about.png) center/cover;
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/about.png) 0%/cover;
   overflow: hidden;
 
@@ -910,10 +924,7 @@ body.active{
   
   //アクセス右側(情報)
   &__right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 30px;
+    width: 100%;
   }
 
   //google map
@@ -942,32 +953,26 @@ body.active{
   &__list{
     margin-top: 14px;
   }
-
 }
 
+.accses__company-info{
+  display: none;
+}
+
+.accses-contact-btn__wrap{
+  display: none;
+}
+
+
 @media (min-width: 765px) {
-  .accses{
-  
-    //google map
-    &__map{
-      width: 100%;
-      margin-top: 30px;
-      iframe{
-        width: 100%;
-        aspect-ratio: 45/22;
-        vertical-align: bottom;
-      }
-    }
-  }
 
 }
 
 @media (min-width: 992px){
   .accses{
     &__wrap{
-      display: flex;
       flex-direction: row-reverse;
-      align-items: center;
+      justify-content: space-between;
     }
 
     //アクセス左側
@@ -981,8 +986,16 @@ body.active{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-top: 0px;
+      width: 45%;
     }
+  }
+
+  .accses-contact-btn__wrap{
+    display: flex;
+  }
+
+  .accses__company-info{
+    display: block;
   }
 }
 
