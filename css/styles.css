@@ -16,17 +16,6 @@ body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
   border-radius: 0;
 }
 
-body {
-  font-size: 0.875rem;
-  color: #ffffff;
-  line-height: 1.5;
-  letter-spacing: 0.06em;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  background-color: rgb(0, 0, 0);
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -35,6 +24,18 @@ a {
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+/* -------------------------------------------- */
+/* 共通部分 */
+/* -------------------------------------------- */
+body {
+  font-size: 0.875rem;
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  background-color: rgb(0, 0, 0);
 }
 
 .inner {
@@ -52,9 +53,6 @@ img {
   position: relative;
 }
 
-/* -------------------------------------------- */
-/* 共通部分 */
-/* -------------------------------------------- */
 .mincho {
   font-family: "kozuka-mincho-pr6n", serif;
 }
@@ -64,81 +62,22 @@ img {
 }
 
 .sec-heading {
-  font-family: "kozuka-mincho-pr6n", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   display: block;
   text-align: center;
-  margin-bottom: 82px;
+  margin-bottom: 60px;
 }
 
 .sec-sub-heading {
   display: block;
-  font-family: "yu-gothic-pr6n", sans-serif;
-  font-size: 1rem;
-  margin-top: 22px;
-}
-
-/* bodyにactiveクラスが着いた時 */
-body.active {
-  overflow-y: hidden;
-}
-
-/* ハンバーガーメニュー */
-.burger {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 3;
-  position: relative;
-}
-
-/* ハンバーガーメニューのバー */
-.bar {
-  width: 80%;
-  width: 100%;
-  height: 2px;
-  border-radius: 6px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.bar:nth-of-type(1) {
-  -webkit-transform: translate(-50%, 10px);
-          transform: translate(-50%, 10px);
-}
-
-.bar:nth-of-type(3) {
-  -webkit-transform: translate(-50%, -10px);
-          transform: translate(-50%, -10px);
-}
-
-/* バーガーメニューにactiveクラスが着いた時 */
-.burger.active .bar:nth-of-type(2) {
-  opacity: 0;
-}
-
-.burger.active .bar:nth-of-type(1) {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  left: 0%;
-}
-
-.burger.active .bar:nth-of-type(3) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  left: 0%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 0.875rem;
+  margin-top: 14px;
 }
 
 .btn {
   color: #000000;
-  line-height: 1.5;
   border-radius: 10px;
   display: block;
   font-weight: bold;
@@ -170,6 +109,7 @@ body.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  letter-spacing: 0.04em;
   margin-top: 8px;
 }
 .phone-btn__middle img {
@@ -179,14 +119,32 @@ body.active {
 .phone-btn__bottom {
   font-size: 0.875rem;
   margin-top: 6px;
+  font-weight: normal;
 }
 
 .contact-btn {
   background-color: #F7C847;
   width: 80%;
   font-size: 0.75rem;
-  margin-top: 20px;
   padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-btn__middle {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.footer-contact-btn {
+  margin-top: 20px;
 }
 
 .contact-btn__wrap {
@@ -293,36 +251,81 @@ body.active {
   bottom: 47%;
 }
 
+.burger {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+.burger.active .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.burger.active .bar:nth-of-type(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 0%;
+}
+.burger.active .bar:nth-of-type(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 0%;
+}
+
+.bar {
+  width: 80%;
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.bar:nth-of-type(1) {
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+}
+.bar:nth-of-type(3) {
+  -webkit-transform: translate(-50%, -10px);
+          transform: translate(-50%, -10px);
+}
+
+body.active {
+  overflow-y: hidden;
+}
+
 @media (min-width: 576px) {
-  .contact-btn__wrap {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .sec-heading {
+    font-size: 2rem;
+    margin-bottom: 82px;
+  }
+  .sec-sub-heading {
+    font-size: 1rem;
+    margin-top: 18px;
   }
   .btn {
     margin: 0;
   }
   .phone-btn {
     width: 300px;
-    background: linear-gradient(12deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #676767 100%);
-    padding: 15px;
-  }
-  .phone-btn__top {
-    font-weight: bold;
-    font-size: 0.75rem;
   }
   .phone-btn__middle {
     font-size: 1.875rem;
   }
-  .phone-btn__middle img {
-    width: 18px;
-    margin-right: 5px;
-  }
   .contact-btn {
     width: 140px;
     margin-left: 10px;
-    margin-top: 0px;
+  }
+  .contact-btn__wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .sns-link__icon {
     height: 64px;
@@ -332,6 +335,15 @@ body.active {
 @media (min-width: 765px) {
   .sec-pad {
     padding-top: 200px;
+  }
+}
+.contact-btn__wrap {
+  margin-top: 0px;
+}
+
+@media (min-width: 992px) {
+  .burger {
+    display: none;
   }
 }
 /* Hover Event */
@@ -515,10 +527,8 @@ body.active {
   }
 }
 @media (min-width: 992px) {
-  .burger {
-    display: none;
-  }
   .footer-nav {
+    margin-top: 0px;
     border-left: 1px solid #707070;
     padding-left: 40px;
     -webkit-box-flex: 1;
@@ -579,11 +589,11 @@ body.active {
   bottom: -5px;
 }
 .about__wrap {
-  padding-top: 140px;
-  padding-bottom: 165px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .about__top {
-  font-size: 1.1875rem;
+  font-size: 1.25rem;
 }
 .about__bottom {
   font-size: 0.875rem;
@@ -696,7 +706,7 @@ body.active {
   padding: 22px 32px;
 }
 .products-card__label {
-  font-size: 1rem;
+  font-size: 0.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -706,9 +716,11 @@ body.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
+  padding: 28px;
   position: absolute;
+  font-weight: bold;
   top: -10px;
   left: -10px;
   background: linear-gradient(45deg, #91910D, #FFC600);
@@ -717,6 +729,11 @@ body.active {
 @media (min-width: 576px) {
   .products-card__item {
     width: calc((100% - 44px) / 2);
+  }
+  .products-card__label {
+    font-size: 1rem;
+    width: 140px;
+    height: 140px;
   }
 }
 @media (min-width: 765px) {
