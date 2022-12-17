@@ -201,7 +201,20 @@ body {
   width: 300px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 55px;
+  
+  //topページのmoreボタン
+  &.--topPage{
+    margin-top: 55px;
+  }
+
+  &.--catalog{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &.--pdf{
+    margin-top: 10px;
+  }
 }
 
 //----- snsアイコン -----
@@ -1178,18 +1191,6 @@ body.active{
   }
 }
 
-//----- カタログページのボタン -----
-.catalog-more{
-  margin-top: 0;
-  width: 100%;
-  max-width: 300px;
-
-  &.--pdf{
-    margin-top: 10px;
-  }
-}
-
-
 @media (min-width: 576px){
   //カタログページのカード
   .catalog-card{
@@ -1355,11 +1356,84 @@ body.active{
 }
 
 /* -------------------------------------------- */
-/*  */
+/* お問い合わせページ */
 /* -------------------------------------------- */
 
 
+//contactボタンの一番上の文章
+.contact-btn-text{
+  line-height: 1;
+  font-size: rem(24);
+}
+
+//contactボタンの番号
+.contact-btn-number{
+  font-size: rem(48);
+  font-weight: 700;
+  margin-top: 23px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.contact-phone-btn,
+.contact-fax-btn{
+  text-align: center;
+}
+
+//電話番号
+.contact-phone-btn{
+  &__bottom{
+    margin-top: 10px;
+  }
+}
+
+//FAX
+.contact-fax-btn{
+
+  &__bottom{
+    width: 350px;
+    max-width: 100%;
+    margin-top: 18px;
+  }
+}
+
+form{
+  margin-top: 72px;
+  background-color: #fff;
+  color: $blackColor; 
+}
+
+@media (max-width: 765px){
+  form{
+    background-color: lightpink;
+  }
+
+  .form-table th{
+    text-align: left;
+  }
+
+
+  .form-table th,
+  .form-table td {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+}
+
+
 @media (min-width: 765px) {
+  .contact-btn-wrap{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+
+
+
+
 
 
 }

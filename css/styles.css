@@ -185,7 +185,16 @@ body {
   width: 300px;
   text-align: center;
   margin: 0 auto;
+}
+.more.--topPage {
   margin-top: 55px;
+}
+.more.--catalog {
+  width: 100%;
+  max-width: 300px;
+}
+.more.--pdf {
+  margin-top: 10px;
 }
 
 .sns-link__icon {
@@ -994,15 +1003,6 @@ body.active {
   width: 100%;
 }
 
-.catalog-more {
-  margin-top: 0;
-  width: 100%;
-  max-width: 300px;
-}
-.catalog-more.--pdf {
-  margin-top: 10px;
-}
-
 @media (min-width: 576px) {
   .catalog-card__item {
     width: calc((100% - 55px) / 2);
@@ -1118,8 +1118,66 @@ body.active {
   }
 }
 /* -------------------------------------------- */
-/*  */
+/* お問い合わせページ */
 /* -------------------------------------------- */
+.contact-btn-text {
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.contact-btn-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 23px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.contact-phone-btn,
+.contact-fax-btn {
+  text-align: center;
+}
+
+.contact-phone-btn__bottom {
+  margin-top: 10px;
+}
+
+.contact-fax-btn__bottom {
+  width: 350px;
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+form {
+  margin-top: 72px;
+  background-color: #fff;
+  color: #000000;
+}
+
+@media (max-width: 765px) {
+  form {
+    background-color: lightpink;
+  }
+  .form-table th {
+    text-align: left;
+  }
+  .form-table th,
+.form-table td {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+}
+@media (min-width: 765px) {
+  .contact-btn-wrap {
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
