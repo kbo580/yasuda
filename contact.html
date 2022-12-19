@@ -125,104 +125,145 @@
         <!-- contact-btn-wrap -->
 
         <form action="">
+          <div class="form-parts">
+            <label class="label" class="label" for="companyName">会社名(法人の場合)</label>
+            <input id="companyName" type="text" name="name" size="60" value="" placeholder="山田太郎">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="department">部署名</label>
+            <input id="department" type="text" name="email" size="60" value="" placeholder="sample@sample.jp">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="name">お名前<span class="must">(必須)</span></label>
+            <input id="name" name="name" type="text" name="tel" size="60" value="" placeholder="山田太郎">
+
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="addresss">ご住所<span class="must">(必須)</span></label>
+            <input id="addresss" type="text" name="tel" size="60" value="" placeholder="京都市中京区麩屋町丸太町">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="tell">電話番号<span class="must">(必須)</span></label>
+            <input id="tell" type="text" name="tel" size="60" value="" placeholder="075-241-0035">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="mail">メールアドレス<span class="must">(必須)</span></label>
+            <input id="mail" type="text" name="tel" size="60" value="" placeholder="abcd@sample.jp">
+          </div>
+
+          <div class="form-check-wrap">
+            <div class="form-parts ">
+              <p class="form-text">大まかな内容をお知らせください。<br>サイズは大体で結構です。素材は希望があればお書きください。</p>
+            </div>
+  
+            <div class="form-parts checkbox-wrap">
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item01" name="content">
+                <label class="" for="item01">表彰盾</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item02" name="content">
+                <label class="" for="item02">クリスタル商品</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item03" name="content">
+                <label class="" for="item03">トロフィー</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item04" name="content">
+                <label class="" for="item04">カップ</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item05" name="content">
+                <label class="" for="item05">メダル</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item06" name="content">
+                <label class="" for="item06">バッジ・社章</label>
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="item07" name="content">
+                <label class="" for="item07">ピックアップ商品</label>
+              </div>
+  
+            </div>
+            <!-- form-parts checkbox-wrap -->
+
+
+
+          </div>
+          <!-- /form-check-wrap -->
+
+          <div class="form-parts">
+            <label class="label" for="size">サイズ</label>
+            <input id="size" type="text" name="name" size="60" value="" placeholder="ご希望のサイズ">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="material">素材</label>
+            <input id="material" type="text" name="email" size="60" value="" placeholder="ご希望の素材">
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="content">お問い合わせ内容<span class="must">(必須)</span></label>
+            <textarea id="content" name="content" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください。"></textarea>
+          </div>
+
+          <div class="form-parts">
+            <label class="label" for="hope">概要(印刷内容等ご希望がありましたらご記入ください。)</label>
+            <textarea id="hope" name="content" cols="30" rows="10" placeholder="その他ご希望等をご記入してください。"></textarea>
+          </div>
+
+          <div class="form-parts">
+            <p class="form-text">ご希望の商品、またご希望のデザインの画像がある場合はこちらから添付してください。(ファイルサイズは 2MB以下でお願い致します。また必ず拡張子（.ai .eps .pdf .jpg）をお付けくださいますようお願い致します。）</p>
+          </div>
+
+          <div  class="form-parts form-file-wrap">
+            <a href="" class="file">ファイル選択</a><span>選択されていません</span>
+            <!-- <a href="" class="file">ファイル選択</a><span>選択されていません</span>
+            <a href="" class="file">ファイル選択</a><span>選択されていません</span> -->
+          </div>
           
-  <table class="form-table">
-    <tbody>
-      <tr>
-        <th>会社名(法人の場合)</th>
-        <td><input type="text" name="name" size="60" value="" placeholder="山田太郎">
-        </td>
-      </tr>
+          <div class="form-parts">
+            <p class="form-text">個人情報の取扱について</p>
 
-      <tr>
-        <th>部署名</th>
-        <td><input type="text" name="email" size="60" value="" placeholder="sample@sample.jp">
-        </td>
-      </tr>
+            <div class="privacy-policy">
+              <div class="privacy-policy__item">
+                <p class="privacy-policy__title">第1条（個人情報）</p>
 
-      <tr>
-        <th> お名前(必須)</th>
-        <td><input type="text" name="tel" size="60" value="" placeholder="03-1234-5678">
-        </td>
-      </tr>
+                <p class="privacy-policy__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+              </div>
+              
+            </div>
+            <!-- /privacy-policy -->
 
-      <tr>
-        <th> ご住所(必須)</th>
-        <td><input type="text" name="tel" size="60" value="" placeholder="03-1234-5678">
-        </td>
-      </tr>
+          </div>
 
-      <tr>
-        <th>電話番号(必須)</th>
-        <td><input type="text" name="tel" size="60" value="" placeholder="03-1234-5678">
-        </td>
-      </tr>
+          <div class="form-parts">
+            <p class="acceptance">個人情報の取扱に同意する<span class="must">(必須)</span></p>
+          </div>
 
-      <tr>
-        <th>メールアドレス(必須)</th>
-        <td><input type="text" name="tel" size="60" value="" placeholder="03-1234-5678">
-        </td>
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  大まかな内容をお知らせください。
-          サイズは大体で結構です。素材は希望があればお書きください。
-
-          <table class="form-table">
-            <tbody>
-              <tr>
-                <th>サイズ</th>
-                <td><input type="text" name="name" size="60" value="" placeholder="山田太郎">
-                </td>
-              </tr>
-        
-              <tr>
-                <th>素材</th>
-                <td><input type="text" name="email" size="60" value="" placeholder="sample@sample.jp">
-                </td>
-              </tr>
-        
-              <tr>
-                <th> お問い合わせ内容(必須)</th>
-                <td><textarea name="content" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください。"></textarea>
-                </td>
-              </tr>
-
-              <tr>
-                <th> 概要(印刷内容等ご希望がありましたらご記入ください。)</th>
-                <td><textarea name="content" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください。"></textarea>
-                </td>
-              </tr>
-        
-            </tbody>
-        
-          </table>
-
-          <p>ご希望の商品、またご希望のデザインの画像がある場合はこちらから添付してください。(ファイルサイズは 2MB以下でお願い致します。また必ず拡張子（.ai .eps .pdf .jpg）をお付けくださいますようお願い致します。）</p>
-
-          
-          ファイル選択
-          選択されていません
-
-          <p>個人情報の取り扱いについて</p>
-          
-          <p>個人情報の取扱に同意する(必須)</p>
-
-          <button>入力内容の確認へ</button>
-          
-          
-
-
+          <div class="form-parts">
+            <input type="submit" value="入力内容の確認へ" class="submit">
+          </div>
 
         </form>
 
-
-
       </div>
       <!-- /inner -->
+      
 
 
     </section>
