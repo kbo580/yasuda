@@ -27,7 +27,7 @@
 
       <div class="header__top">
         <h1 class="site-title">
-          <a href="#"><img src="images/site-logo.png" alt=""></a>
+          <a href="index.html"><img src="images/site-logo.png" alt=""></a>
         </h1>
 
         <div class="burger" id="burger">
@@ -100,8 +100,302 @@
 
   <main>
 
+    <section class="archive sec-pad">
+      <div class="inner">
 
-    <section class=" sec-pad">
+        <h2 class="sec-heading sec-heading--border mincho">製品一覧<span class="sec-sub-heading en-heading">Products</span></h2>
+
+        <div class="search-area">
+          <p class="search-area__heading mincho">製品から選ぶ</p>
+
+          <form id="selectForm" class="products-selectForm selectForm">
+            <label>
+              <input type="checkbox" name="products" value="表彰盾">
+              <span class="checkbox_parts">表彰盾</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="products" value="クリスタル商品">
+              <span class="checkbox_parts">クリスタル商品</span>
+            </label>
+            
+            <label>
+              <input type="checkbox" name="products" value="トロフィー">
+              <span class="checkbox_parts">トロフィー</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="products" value="カップ">
+              <span class="checkbox_parts">カップ</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="products" value="メダル">
+              <span class="checkbox_parts">メダル</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="products" value="バッジ・社章">
+              <span class="checkbox_parts">バッジ・社章</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="products" value="その他">
+              <span class="checkbox_parts">その他</span>
+            </label>
+
+          </form>
+        </div>
+        <!-- search_area--products -->
+
+        <div class="search-area">
+          <p class="search-area__heading mincho">シーンから選ぶ</p>
+
+          <form id="selectForm" class="scene-selectForm selectForm">
+            <label>
+              <input type="checkbox" name="scene" value="ゴルフコンペ">
+              <span class="checkbox_parts">ゴルフコンペ</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="scene" value="スポーツ大会">
+              <span class="checkbox_parts">スポーツ大会</span>
+            </label>
+            
+            <label>
+              <input type="checkbox" name="scene" value="創立記念・竣工記念">
+              <span class="checkbox_parts">創立記念・竣工記念</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="scene" value="企業・学校">
+              <span class="checkbox_parts">企業・学校</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="scene" value="卒業・卒園">
+              <span class="checkbox_parts">卒業・卒園</span>
+            </label>
+
+            <label>
+              <input type="checkbox" name="scene" value="ウエディング">
+              <span class="checkbox_parts">ウエディング</span>
+            </label>
+
+          </form>
+        </div>
+        <!-- search_area--scene -->
+
+        <div class="wrapper">
+
+          <ul class="archive-card__wrap">
+
+            <li class="archive-card" data-scene='["創立記念・竣工記念"]' data-products='["表彰盾","クリスタル商品"]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/archives-01.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">表彰盾</li>
+                <li class="archive-card__tag">クリスタル商品</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["ゴルフコンペ","スポーツ大会","創立記念・竣工記念"]' data-products='["表彰盾",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-01.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">表彰盾</li>
+                <li class="archive-card__tag">ゴルフコンペ</li>
+                <li class="archive-card__tag">スポーツ大会</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["ゴルフコンペ", "スポーツ大会"]' data-products='["トロフィー",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-03.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">トロフィー</li>
+                <li class="archive-card__tag">ゴルフコンペ</li>
+                <li class="archive-card__tag">スポーツ大会</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["ゴルフコンペ"]' data-products='["カップ","クリスタル商品"]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-04.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">カップ</li>
+                <li class="archive-card__tag">クリスタル商品</li>
+                <li class="archive-card__tag">ゴルフコンペ</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["スポーツ大会","卒業・卒園"]' data-products='["メダル",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-05.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">メダル</li>
+                <li class="archive-card__tag">スポーツ大会</li>
+                <li class="archive-card__tag">卒業・卒園</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["企業・学校"]' data-products='["バッジ・社章",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-06.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">バッジ・社章</li>
+                <li class="archive-card__tag">企業・学校</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["創立記念・竣工記念","卒業・卒園"]' data-products='["表彰盾",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-07.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">盾</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+                <li class="archive-card__tag">卒業・卒園</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["創立記念・竣工記念","企業・学校"]' data-products='["クリスタル商品",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-09.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">ブロンズ</li>
+                <li class="archive-card__tag">クリスタル商品</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+                <li class="archive-card__tag">企業・学校</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["スポーツ大会","創立記念・竣工記念","卒業・卒園"]' data-products='["その他",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-10.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">旗・横断幕・ペナント</li>
+                <li class="archive-card__tag">スポーツ大会</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+                <li class="archive-card__tag">卒業・卒園</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["ウエディング","創立記念・竣工記念"]' data-products='["バッジ・社章",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-11.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">タイ止ブローチ</li>
+                <li class="archive-card__tag">ウエディング</li>
+                <li class="archive-card__tag">創立記念・竣工記念</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+
+            <li class="archive-card" data-scene='["ウエディング","スポーツ大会"]' data-products='["その他",""]'>
+    
+              <figure class="archive-card__image-wrap">
+                <img src="images/products-12.png" alt="" class="archive-card__image">
+              </figure>
+    
+              <p class="archive-card__heading card-common__heading">商品名が入ります。</p>
+              <p class="archive-card__desc">透明、黒の光学ガラスを組み合わせ、そこに金箔、プラチナ箔とフルカラー印刷とも組み合わせた大変手の込んだ手作りならではのプレミアムトロフィーです。</p>
+    
+              <ul class="archive-card__tagList">
+                <li class="archive-card__tag">表彰盾</li>
+                <li class="archive-card__tag">ウエディング</li>
+                <li class="archive-card__tag">スポーツ大会</li>
+              </ul>
+    
+            </li>
+            <!-- /archive-card -->
+            
+          </ul>
+          <!-- archive-card__wrap -->
+        </div>
+
+      </div>
+      <!-- inner -->
 
     </section>
     

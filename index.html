@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles.scss">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
 <title></title>
 
 <script>
@@ -111,7 +114,6 @@
         
       </div>
       <!-- l-inner -->
-      
 
     </div>
     <!-- /mv -->
@@ -143,9 +145,18 @@
           </div>
           <!-- /pickUp__body -->
 
-          <div class="slide pickUp__images">
-            <img src="images/pickup.png" alt="">
+          <div class="swiper pickUp-swiper pickUp__image-wrap">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/pickup.png" alt="" class="pickUp__images"></div>
+              <div class="swiper-slide"><img src="images/products-02.png" alt="" class="pickUp__images"></div>
+              <div class="swiper-slide"><img src="images/products-07.png" alt="" class="pickUp__images"></div>
+            </div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
           </div>
+          <!-- /Myswiper -->
 
         </div>
         <!-- /pickUp__wrap -->
@@ -160,7 +171,7 @@
         <ul class="products-card__list">
           
           <li class="products-card__item">
-            <a href="#" class="products-card__wrap">
+            <a href="archives.html" class="products-card__wrap">
     
               <div class="products-card__bg" style="background:url(../images/products-01.png) center/cover;">
                 <p class="products-card__desc">飾りたくなるようなデザインの表彰盾をご用意。名誉を何度も思い出す。飾って初めて映える表彰楯。</p>
@@ -257,7 +268,7 @@
 
         </ul>
 
-        <a href="#" class="more --topPage">もっと見る</a>    
+        <a href="products.html" class="more --topPage">もっと見る</a>    
 
       </div>
     </section>
@@ -270,7 +281,7 @@
 
           <a href="" class="scene-card  card-common__item">
             <img src="images/scene-01.png" alt=""  class="scene-card__image card-common__image">
-            <p class="scene-card__heading card-common__heading card-common__heading">ゴルフコンペ</p>
+            <p class="scene-card__heading card-common__heading">ゴルフコンペ</p>
           </a>
 
           <a href="" class="scene-card  card-common__item">
@@ -301,7 +312,7 @@
         </div>
         <!-- scene__wrap card-common__wrap -->
 
-        <a href="#" class="more --topPage">もっと見る</a>
+        <a href="scene.html" class="more --topPage">もっと見る</a>
 
       </div>
     </section>
@@ -416,7 +427,11 @@
     
   </footer>
 
+ 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
 

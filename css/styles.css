@@ -4,11 +4,14 @@
           box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
+body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea, button {
   margin: 0;
   padding: 0;
   list-style: none;
   border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 input[type=submit],
@@ -383,9 +386,6 @@ body.active {
 }
 .card-common__heading {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   text-align: center;
   background: -webkit-gradient(linear, left top, right top, from(#910D40), to(#F50168));
   background: linear-gradient(90deg, #910D40, #F50168);
@@ -401,6 +401,9 @@ body.active {
   }
 }
 @media (min-width: 765px) {
+  body {
+    font-size: 1rem;
+  }
   .sec-pad {
     padding-top: 200px;
   }
@@ -693,6 +696,9 @@ body.active {
 /* -------------------------------------------- */
 /* pickUp  */
 /* -------------------------------------------- */
+.pickUp {
+  background: url(../images/bg-02.png) center/cover no-repeat;
+}
 .pickUp__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -704,7 +710,7 @@ body.active {
   margin-top: 40px;
 }
 .pickUp__body {
-  background-color: #fff;
+  background-color: #EFEFEF;
   color: #000000;
   width: 100%;
   margin-top: 30px;
@@ -713,16 +719,63 @@ body.active {
 .pickUp__name {
   font-size: 1.25rem;
   text-align: center;
+  line-height: 1;
 }
 .pickUp__desc {
   margin-top: 30px;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
 }
 .pickUp__link {
   margin-top: 26px;
+  margin-top: 50px;
   display: inline-block;
+  font-size: 0.875rem;
 }
-.pickUp__image {
+.pickUp__image-wrap {
   width: 100%;
+}
+.pickUp .pickUp__images {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 5/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-wrapper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #EFEFEF;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  position: absolute;
+}
+
+.swiper-button-prev::after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.swiper-button-next::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 @media (min-width: 765px) {
@@ -742,9 +795,9 @@ body.active {
     font-size: 1.5rem;
   }
   .pickUp__desc {
-    margin-top: 41px;
+    margin-top: 40px;
   }
-  .pickUp__images {
+  .pickUp__image-wrap {
     width: 50%;
   }
 }
@@ -768,6 +821,9 @@ body.active {
   margin-top: 50px;
   width: 100%;
 }
+.products-card__item:last-child .products-card__label {
+  padding: 10px;
+}
 .products-card__bg {
   aspect-ratio: 1/1.193;
   display: -webkit-box;
@@ -780,8 +836,7 @@ body.active {
 }
 .products-card__desc {
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 22px 32px;
-  background-color: lightseagreen;
+  padding: 22px 26px;
   min-height: 107px;
 }
 .products-card__label {
@@ -797,7 +852,7 @@ body.active {
           justify-content: center;
   width: 120px;
   height: 120px;
-  padding: 28px;
+  padding: 20px;
   position: absolute;
   font-weight: bold;
   top: -10px;
@@ -972,8 +1027,110 @@ body.active {
   }
 }
 /* -------------------------------------------- */
-/*  */
+/* 製品一覧ページ */
 /* -------------------------------------------- */
+.search-area {
+  margin-top: 30px;
+}
+.search-area__heading {
+  font-size: 1.25rem;
+}
+.search-area input {
+  margin-top: 16px;
+}
+.search-area label {
+  margin-right: 20px;
+}
+
+.selectForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.archive-card {
+  width: 100%;
+  margin-top: 30px;
+}
+.archive-card__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 34px;
+}
+.archive-card__image-wrap {
+  width: 100%;
+}
+.archive-card__image {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.archive-card__heading {
+  margin-top: 20px;
+}
+.archive-card__desc {
+  padding: 22px 25px;
+}
+.archive-card__tagList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -15px;
+}
+.archive-card__tag {
+  border: 1px solid #fff;
+  font-size: 0.875rem;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.search-box_label {
+  font-weight: bold;
+}
+
+.is-hide {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .archive-card {
+    width: calc((100% - 55px) / 2);
+    margin-top: 56px;
+  }
+}
+@media (min-width: 992px) {
+  .search-area {
+    margin-top: 60px;
+  }
+  .search-area__heading {
+    font-size: 1.5rem;
+  }
+  .search-area input {
+    margin-top: 30px;
+  }
+  .search-area label {
+    margin-right: 50px;
+  }
+  .archive-card {
+    width: 300px;
+  }
+  .archive-card__wrap::after {
+    content: "";
+    width: 300px;
+    display: block;
+  }
+}
 /* -------------------------------------------- */
 /* catalog */
 /* -------------------------------------------- */
@@ -1025,6 +1182,12 @@ body.active {
 /* -------------------------------------------- */
 /* シーンページ */
 /* -------------------------------------------- */
+.scene-card__heading {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /* -------------------------------------------- */
 /* 会社概要 */
 /* -------------------------------------------- */
@@ -1156,7 +1319,7 @@ body.active {
   margin-top: 10px;
 }
 
-form {
+.contact-form {
   margin-top: 72px;
   background-color: #fff;
   color: #000000;
@@ -1284,7 +1447,7 @@ textarea {
   .contact-fax-btn__bottom {
     margin-top: 18px;
   }
-  form {
+  .contact-form {
     margin-top: 72px;
     padding: 20px;
   }
@@ -1321,9 +1484,6 @@ textarea {
     font-size: 1.5rem;
   }
 }
-/* -------------------------------------------- */
-/*  */
-/* -------------------------------------------- */
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
