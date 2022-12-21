@@ -501,7 +501,7 @@ body.active {
   top: 0;
   left: 0;
   z-index: 2;
-  display: none;
+  overflow: auto;
 }
 
 .sp-header__bottom-wrap {

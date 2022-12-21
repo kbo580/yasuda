@@ -570,7 +570,8 @@ body.active{
   top: 0;
   left: 0;
   z-index: 2;
-  display: none;
+  overflow: auto;
+  // display: none;
 }
 
 .sp-header__bottom-wrap{
