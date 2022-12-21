@@ -460,7 +460,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   body {
     font-size: rem(16);
   }
@@ -571,7 +571,7 @@ body.active{
   left: 0;
   z-index: 2;
   overflow: auto;
-  // display: none;
+  display: none;
 }
 
 .sp-header__bottom-wrap{
@@ -588,7 +588,7 @@ body.active{
   display: none;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .header__sns-link{
     position: absolute;
     top: -27px;
@@ -691,7 +691,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   //----- sp用ナビ -----
   .sp-nav{
     font-size: rem(16);
@@ -746,7 +746,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .mv{
   
     &__copy{
@@ -794,7 +794,7 @@ body.active{
 
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .yasuda{
     // height: 650px;
   
@@ -833,6 +833,7 @@ body.active{
     width: 100%;
     margin-top: 30px;
     padding: 30px 15px;
+    // padding: 3.125vw 2.6vw;
   }
 
   &__name{
@@ -909,7 +910,7 @@ body.active{
   transform: rotate(45deg);
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .pickUp{
     &__wrap{
       flex-direction: row-reverse;
@@ -1023,7 +1024,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 992px) {
 //----- 製品 -----
 .products-card{
   
@@ -1107,7 +1108,7 @@ body.active{
 }
 
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
 
 }
 
@@ -1174,7 +1175,7 @@ body.active{
   font-size: rem(24);
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .footer{
     &__left{
       margin-right: 80px;
@@ -1386,7 +1387,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
 
 
 
@@ -1422,7 +1423,7 @@ body.active{
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
 
 
 }
@@ -1461,7 +1462,7 @@ body.active{
   }
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 768px) {
   .about-table{
 
     &__heading,
@@ -1518,7 +1519,7 @@ body.active{
 }
 
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   
   
 }
@@ -1718,7 +1719,7 @@ input[type="checkbox"]{
   font-weight: bold;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   //----- contactページのボタン -----
   .contact-btn-wrap{
     padding-top: 100px;
@@ -1804,7 +1805,7 @@ input[type="checkbox"]{
 /* -------------------------------------------- */
 
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
 
 
 }
@@ -1814,7 +1815,7 @@ input[type="checkbox"]{
 /* -------------------------------------------- */
 
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
 
 
 }
